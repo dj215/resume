@@ -1,0 +1,16 @@
+body {
+  background-color: #8facc0;
+  color: white;
+  font-family: sans-serif;
+}
+hr {
+  border-style: dashed;
+  width: 90%;
+  margin-left: 0;
+}
+h1,
+h2,
+h3 {
+  color: black;
+  line-height: 5px;
+}
