@@ -1,0 +1,17 @@
+body {
+  background-color: #8facc0;
+  font-family: sans-serif;
+}
+hr {
+  border-style: none;
+  border-top-style: dashed;
+  border-top-width: 2px;
+  width: 40%;
+  margin-left: 0;
+}
+h1,
+h2,
+h3 {
+  color: black;
+  line-height: 5px;
+}
