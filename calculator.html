@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Calculator</title>
+  </head>
+  <body>
+      <div style="margin-bottom: 10px;">
+          <span>1st Number :</span>
+          <span><input type="text" id="first" value=""/></span>
+      </div>
+      <div>
+        <span>2nd Number :</span>
+        <span><input id="second" value=""/><span>
+    </div>
+    <p id="result"></p>
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+    <script>
+        let num1,num2;
+        document.getElementById("first").addEventListener("change",setFirstNumber)
+        document.getElementById("second").addEventListener("change",setSecondNumber)
+        document.getElementById("multiply").addEventListener("click",multiplyHandler)
+        document.getElementById("divide").addEventListener("click",divideHandler)
+
+        const resultElement = document.getElementById("result");
+        function setFirstNumber(){
+            text.contains("[a-zA-Z]+")
+            num1 = parseInt(this.value)
+        }
+        function setSecondNumber(){
+            num2 = parseInt(this.value)
+        }
+        function multiplyHandler(){
+            if(isNaN(parseInt(num1)) || isNaN(parseInt(num2))){
+                alert("Please enter valid number")
+                return
+            }
+            resultElement.textContent = `The Result is:${parseInt(num1) * parseInt(num2)}`
+        }
+        function divideHandler(){
+            if(isNaN(num1) || isNaN(num2)){
+                alert("Please enter valid number")
+                return
+            }else if(num2 === 0){
+                alert("Number can not be divide by 0")
+                return
+            }
+            resultElement.textContent = `The Result is:${num1 / num2}`
+        }
+    </script>
+  </body>
+</html>
